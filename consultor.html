@@ -33,10 +33,11 @@
                         <div class="row">
                             <div class="col">
                                 <p>Dirección: Bogota - cll 30 #3-7</p>
-                                <button class="btn btn-warning">Cambiar</button>
+                                <button class="btn btn-warning" data-bs-toggle="modal"
+                                    data-bs-target="#cambiarUbicacionConsultor">Cambiar</button>
                             </div>
                         </div>
-                        <hr/>
+                        <hr />
                         <h5 class="card-title">Contactanos</h5>
                         <div class="row">
                             <div class="col">
@@ -67,7 +68,6 @@
                         </div>
                     </div>
                 </nav>
-
                 <div class="row mt-3">
                     <div class="col-sm-6">
                         <div class="card">
@@ -87,13 +87,15 @@
                                 <p class="card-text">Ubicación: Bogotá</p>
                                 <div class="row">
                                     <div class="col">
-                                        <button class="btn btn-primary text-end">
+                                        <button class="btn btn-primary text-end" data-bs-toggle="modal"
+                                            data-bs-target="#cambiarUbicacionEquipo">
                                             Ubicación
                                         </button>
                                     </div>
                                     <div class="col"></div>
                                     <div class="col">
-                                        <a href="#" class="btn btn-warning">Reporte</a>
+                                        <a href="#" class="btn btn-warning" data-bs-toggle="modal"
+                                            data-bs-target="#reporte">Reporte</a>
                                     </div>
                                 </div>
                             </div>
@@ -117,14 +119,16 @@
                                 <p class="card-text">Ubicación: Medellin</p>
                                 <div class="row">
                                     <div class="col">
-                                        <button class="btn btn-primary text-end">
+                                        <button class="btn btn-primary text-end" data-bs-toggle="modal"
+                                            data-bs-target="#cambiarUbicacionEquipo">
                                             Ubicación
                                         </button>
                                     </div>
                                     <div class="col">
                                     </div>
                                     <div class="col">
-                                        <a href="#" class="btn btn-warning">Reporte</a>
+                                        <a href="#" class="btn btn-warning" data-bs-toggle="modal"
+                                            data-bs-target="#reporte">Reporte</a>
                                     </div>
                                 </div>
                             </div>
@@ -147,6 +151,81 @@
             </div>
         </div>
     </div>
+
+    <div class="modal" id="cambiarUbicacionConsultor" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Novedades sin leer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Cambiar ciudad
+                    <select class="form-control">
+                        <option value="">Bogota</option>
+                        <option value="">Medellin</option>
+                    </select>
+                    Cambiar dirección
+                    <input class="form-control" type="text">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Cambiar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="cambiarUbicacionEquipo" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cambiar ubicación equipo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Cambiar ciudad
+                    <select class="form-control">
+                        <option value="">Bogota</option>
+                        <option value="">Medellin</option>
+                    </select>
+                    Cambiar dirección
+                    <input class="form-control" type="text">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Cambiar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="reporte" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cambiar ubicación equipo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label"></label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    Estado del equipo
+                    <select class="form-control">
+                        <option value="">En buen estado</option>
+                        <option value="">En mal estado</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Cambiar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
         crossorigin="anonymous"></script>

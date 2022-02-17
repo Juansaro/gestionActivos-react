@@ -32,13 +32,15 @@
                         <h5 class="card-title">Novedades</h5>
                         <div class="row">
                             <div class="col">
-                                <button class="btn btn-success">Revisadas</button>
+                                <button class="btn btn-success" data-bs-toggle="modal"
+                                    data-bs-target="#novedadesLeidas">Revisadas</button>
                             </div>
                             <div class="col">
-                                <button class="btn btn-warning">Por leer</button>
+                                <button class="btn btn-warning" data-bs-toggle="modal"
+                                    data-bs-target="#alertaNovedades">Por leer</button>
                             </div>
                         </div>
-                        <hr/>
+                        <hr />
                         <h5 class="card-title">Gráfico de equipos</h5>
                         <div class="row">
                             <div class="col">
@@ -53,7 +55,7 @@
                                 </div>
                             </div>
                         </div>
-                        <hr/>
+                        <hr />
                         <h5 class="card-title">Despachar equipos</h5>
                         <div class="row">
                             <div class="col">
@@ -75,7 +77,8 @@
                         <div class="navbar-collapse collapse" id="collapseNavbar">
                             <ul class="navbar-nav">
                                 <li class="nav-item active">
-                                    <button class="btn btn-success">Registrar</button>
+                                    <button class="btn btn-success" data-bs-toggle="modal"
+                                    data-bs-target="#registrarEquipo">Registrar</button>
                                 </li>
                             </ul>
                             <ul class="navbar-nav ms-auto">
@@ -111,10 +114,14 @@
                                 <p class="card-text">Ubicación: Bogotá</p>
                                 <div class="row">
                                     <div class="col">
-                                        <a href="#" class="btn btn-warning">Actualizar</a>
+                                        <a href="#"
+                                        class="btn btn-warning"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#editarEquipo">Actualizar</a>
                                     </div>
                                     <div class="col">
-                                        <button class="btn btn-dark text-white">
+                                        <button class="btn btn-dark text-white" data-bs-toggle="modal"
+                                        data-bs-target="#informes">
                                             <ion-icon name="file-tray-full-outline" class="pr-2">
                                             </ion-icon>
                                         </button>
@@ -147,10 +154,12 @@
                                 <p class="card-text">Ubicación: Medellin</p>
                                 <div class="row">
                                     <div class="col">
-                                        <a href="#" class="btn btn-warning">Actualizar</a>
+                                        <a href="#" class="btn btn-warning" data-bs-toggle="modal"
+                                        data-bs-target="#editarEquipo" >Actualizar</a>
                                     </div>
                                     <div class="col">
-                                        <button class="btn btn-dark text-white">
+                                        <button class="btn btn-dark text-white" data-bs-toggle="modal"
+                                        data-bs-target="#informes">
                                             <ion-icon name="file-tray-full-outline" class="pr-2">
                                             </ion-icon>
                                         </button>
@@ -181,6 +190,193 @@
             </div>
         </div>
     </div>
+
+    <div class="modal" id="novedadesLeidas" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Historial de novedades</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card text-dark bg-light mb-3" style="max-width: 12rem;">
+                                <div class="card-header">HP-BX100</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">02/02/2022</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make
+                                        up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card text-dark bg-light mb-3" style="max-width: 12rem;">
+                                <div class="card-header">Asus KL-09</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">02/03/2022</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make
+                                        up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="alertaNovedades" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Novedades sin leer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card text-dark bg-light mb-3" style="max-width: 12rem;">
+                                <div class="card-header">HP-BX100</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">02/02/2022</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make
+                                        up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card text-dark bg-light mb-3" style="max-width: 12rem;">
+                                <div class="card-header">Asus KL-09</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">02/03/2022</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make
+                                        up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="informes" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Historial de informes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card text-dark bg-light mb-3" style="max-width: 12rem;">
+                                <div class="card-header">HP-BX100</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">02/02/2022</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make
+                                        up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card text-dark bg-light mb-3" style="max-width: 12rem;">
+                                <div class="card-header">Asus KL-09</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">02/03/2022</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make
+                                        up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="registrarEquipo" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Registrar equipo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Marca
+                    <input class="form-control" type="text">
+                    Modelo
+                    <input class="form-control" type="text">
+                    Procesador
+                    <input class="form-control" type="text">
+                    memoria RAM
+                    <input class="form-control" type="text">
+                    Almacenamiento
+                    <input class="form-control" type="text">
+                    Accesorios
+                    <input class="form-control" type="text">
+                    Dirección
+                    <input class="form-control" type="text">
+                    Estado del equipo
+                    <select class="form-control">
+                        <option value="">En buen estado</option>
+                        <option value="">En mal estado</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-success">Registrar equipo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="editarEquipo" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar equipo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Marca
+                    <input class="form-control" type="text">
+                    Modelo
+                    <input class="form-control" type="text">
+                    Procesador
+                    <input class="form-control" type="text">
+                    memoria RAM
+                    <input class="form-control" type="text">
+                    Almacenamiento
+                    <input class="form-control" type="text">
+                    Accesorios
+                    <input class="form-control" type="text">
+                    Dirección
+                    <input class="form-control" type="text">
+                    Estado del equipo
+                    <select class="form-control">
+                        <option value="">En buen estado</option>
+                        <option value="">En mal estado</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-warning">Editar equipo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
         crossorigin="anonymous"></script>

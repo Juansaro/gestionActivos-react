@@ -16,14 +16,18 @@
 <body>
 
     <div class="container" id="grupo">
-        <nav class="navbar navbar-light bg-light mt-3 mb-4  shadow-lg">
+
+        <nav class="navbar navbar-light bg-b mt-3 mb-4  shadow-lg">
             <div class="container-fluid">
                 <a class="navbar-brand">Soporte de equipos</a>
                 <div>
                     <a class="navbar-brand">Inicio</a>
                     <a class="navbar-brand">Servicios</a>
                     <a class="navbar-brand">Contacto</a>
-                    <button class="btn btn-primary">Acceder</button>
+                    <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#registro">
+                        Registrase</button>
+                    <a> <img data-bs-toggle="modal" data-bs-target="#iniciarSesion"
+                            src="https://img.icons8.com/ios/50/000000/enter-2.png" height="37px" /></a>
                 </div>
             </div>
         </nav>
@@ -72,37 +76,102 @@
             </button>
         </div>
 
-        <form class="mt-4">
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        <div class="card mt-5">
+            <div class="card-body">
+                <h5 class="card-title">Contactanos</h5>
+                <form class="mt-4">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">Escribe tu correo.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Asunto</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-dark">Enviar</button>
+                </form>
             </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        </div>
 
         <footer>
-            <div class="col">
+            <div class="container">
                 <div class="row">
-                    Semilleros SENA
+                    <div class="col text-center">
+                        Semilleros SENA
+                    </div>
                 </div>
                 <div class="row">
-                    Todos los derechos reservados
+                    <div class="col text-center">
+                        Todos losm derechos reservados
+                    </div>
                 </div>
                 <div class="row">
-                    2022
+                    <div class="col text-center">
+                        2022
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <a href="https://icons8.com/icon/1090/entrar">Entrar icon by Icons8</a>
+                    </div>
                 </div>
             </div>
         </footer>
 
+    </div>
+
+    <div class="modal" id="registro" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Registro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Nombres
+                    <input class="form-control" type="text">
+                    Apellidos
+                    <input class="form-control" type="text">
+                    Teléfono
+                    <input class="form-control" type="text">
+                    Correo
+                    <input class="form-control" type="text">
+                    Clave
+                    <input class="form-control" type="text">
+                    Tipo identificación
+                    <select class="form-control">
+                        <option value="1">CC</option>
+                        <option value="2">Documento de extranjería</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Registrase</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="iniciarSesion" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Iniciar sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Correo
+                    <input class="form-control" type="text">
+                    Clave
+                    <input class="form-control" type="password">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Iniciar sesión</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
@@ -111,6 +180,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
